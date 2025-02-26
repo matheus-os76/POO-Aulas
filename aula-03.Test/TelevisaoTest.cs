@@ -59,4 +59,63 @@ public class TelevisaoTest
         televisao.AlternarModoMudo();
         Assert.AreEqual(0, televisao.Volume);
     }
+
+
+    [TestMethod]
+    public void Deve_Restaurar_Volume_Anterior_Ao_Desmutar()
+    {
+        Televisao televisao = new Televisao(25f);
+        const int volumeInicial = 10;
+
+        televisao.AlternarModoMudo(); // Muta
+        televisao.AlternarModoMudo(); // Desmuta
+
+        Assert.AreEqual(volumeInicial, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Manter_Estado_Correto_Com_Multiplas_Alternancias_Mudo()
+    {
+        Televisao televisao = new Televisao(25f);
+        const int volumeInicial = 10;
+
+        televisao.AlternarModoMudo(); // Muta
+        Assert.AreEqual(0, televisao.Volume);
+
+        televisao.AlternarModoMudo(); // Desmuta
+        Assert.AreEqual(volumeInicial, televisao.Volume);
+
+        televisao.AlternarModoMudo(); // Muta novamente
+        Assert.AreEqual(0, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Ignorar_Mudancas_Volume_Durante_Mudo()
+    {
+        Televisao televisao = new Televisao(25f);
+
+        televisao.AlternarModoMudo();
+        televisao.AumentarVolume();
+        televisao.DiminuirVolume();
+
+        Assert.AreEqual(0, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Manter_Mudo_Ao_Tentar_Alterar_Volume()
+    {
+        Televisao televisao = new Televisao(25f);
+        const int volumeInicial = 10;
+
+        televisao.AlternarModoMudo();
+        televisao.AumentarVolume();
+
+        Assert.AreEqual(0, televisao.Volume);
+
+        televisao.AlternarModoMudo();
+        Assert.AreEqual(volumeInicial, televisao.Volume);
+    }
+
+
+    
 }
