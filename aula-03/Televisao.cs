@@ -1,6 +1,6 @@
 namespace aula_03;
 
-class Televisao
+public class Televisao
 {
     //O método construtor possui o mesmo nome da classe. 
     // Ele não possui retorno (nem mesmo o void)

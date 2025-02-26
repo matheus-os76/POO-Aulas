@@ -1,10 +1,62 @@
 using aula_03;
 
+namespace aula_03.Test;
+
 [TestClass]
 public class TelevisaoTest
 {
+    [TestMethod]
     public void Dado_Tamanho_21_Deve_Retornar_Excecao()
     {
-        Assert.Throws<ArgumentOutOfRangeException>(() => new Televisao(21f), Assert.AssertNonStrictThrowsInterpolatedStringHandler<ArgumentOutOfRangeException>);
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(21f), $"O tamanho(21) não é suportado!");
+    }
+
+    [TestMethod]
+    public void Dado_Tamanho_81_Deve_Retornar_Excecao()
+    {
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(81f), $"O tamanho(81) não é suportado!");
+    }
+
+    [TestMethod]
+    public void Dado_Tamanho_25_Deve_Criar_Instancia()
+    {
+        const float tamanho = 25f;
+
+        Televisao televisao = new Televisao(tamanho);
+        Assert.IsInstanceOfType(televisao, typeof(Televisao));
+        Assert.AreEqual(tamanho, televisao.Tamanho);
+    }
+
+    [TestMethod]
+    public void Deve_Criar_Instancia_Com_Volume_10()
+    {
+        const int volumePadrao = 10;
+
+        Televisao televisao = new Televisao(25f);
+        Assert.AreEqual(volumePadrao, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Ter_Volume_11_Apos_Aumentar_Volume()
+    {
+        Televisao televisao = new Televisao(25f);
+        televisao.AumentarVolume();
+        Assert.AreEqual(11, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Ter_Volume_09_Apos_Diminuir_Volume()
+    {
+        Televisao televisao = new Televisao(25f);
+        televisao.DiminuirVolume();
+        Assert.AreEqual(09, televisao.Volume);
+    }
+
+    [TestMethod]
+    public void Deve_Ter_Volume_0_Ao_Mutar()
+    {
+        Televisao televisao = new Televisao(25f);
+        televisao.AlternarModoMudo();
+        Assert.AreEqual(0, televisao.Volume);
     }
 }
