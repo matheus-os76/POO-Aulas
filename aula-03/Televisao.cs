@@ -17,6 +17,7 @@ public class Televisao
         }
         Tamanho = tamanho;
         Volume = VOLUME_PADRAO;
+        Canal = PRIMEIRO_CANAL;
     }
 
     //Optamos pela utilização da constante para tornar o código mais legível.
@@ -25,10 +26,9 @@ public class Televisao
     private const int VOLUME_MAXIMO = 12;
     private const int VOLUME_MINIMO = 0;
     private const int VOLUME_PADRAO = 10;
-
     private int _ultimoVolume = VOLUME_PADRAO;
-
-
+    private const int PRIMEIRO_CANAL = 1;
+    private const int ULTIMO_CANAL = 10;
 
     //Get: permite que seja executada a 
     //leitura do valor atual da propriedade
@@ -45,10 +45,11 @@ public class Televisao
     public int Volume { get; private set; }
     public int Canal { get; set; }
     public bool Estado { get; set; }
+    private bool Tv_mutada { get; set; }
 
     public void AumentarVolume()
     {
-        if (Volume < VOLUME_MAXIMO)
+        if (Volume < VOLUME_MAXIMO && !Tv_mutada)
         {
             Volume++;
             _ultimoVolume = Volume;
@@ -61,7 +62,7 @@ public class Televisao
 
     public void DiminuirVolume()
     {
-        if (Volume > VOLUME_MINIMO)
+        if (Volume > VOLUME_MINIMO && !Tv_mutada)
         {
             Volume--;
             _ultimoVolume = Volume;
@@ -79,13 +80,58 @@ public class Televisao
         if (Volume > VOLUME_MINIMO)
         {
             _ultimoVolume = Volume;
+            Tv_mutada = true;
             Volume = VOLUME_MINIMO;
             Console.WriteLine("A TV está no modo MUTE.");
         }
         else
         {
+            Tv_mutada = false;
             Volume = _ultimoVolume;
             Console.WriteLine($"O volume da TV é: {Volume}.");
         }
+    }
+
+    public void SubirCanal()
+    {
+        if (Canal < ULTIMO_CANAL)
+        {
+            Canal++;
+        } else {
+            Canal = PRIMEIRO_CANAL;
+        }
+    }
+
+    public void DescerCanal()
+    {
+        if (Canal > PRIMEIRO_CANAL)
+        {
+            Canal--;
+        } else {
+            Canal = ULTIMO_CANAL;
+        }
+    }
+
+    public void AlterarCanal(int C)
+    {
+        if (C >= PRIMEIRO_CANAL && C <= ULTIMO_CANAL)
+        {
+            if (Canal != C)
+            {
+                Canal = C;
+            } else {
+                Console.WriteLine("A TV já está sintonizada neste canal!");
+            }
+        }
+    }
+
+    public int PrimeiroCanal()
+    {
+        return PRIMEIRO_CANAL;
+    }
+
+    public int UltimoCanal()
+    {
+        return ULTIMO_CANAL;
     }
 }

@@ -8,13 +8,13 @@ public class TelevisaoTest
     [TestMethod]
     public void Dado_Tamanho_21_Deve_Retornar_Excecao()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(21f), $"O tamanho(21) não é suportado!");
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(21f), $"O tamanho(21) nï¿½o ï¿½ suportado!");
     }
 
     [TestMethod]
     public void Dado_Tamanho_81_Deve_Retornar_Excecao()
     {
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(81f), $"O tamanho(81) não é suportado!");
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => new Televisao(81f), $"O tamanho(81) nï¿½o ï¿½ suportado!");
     }
 
     [TestMethod]
@@ -116,6 +116,44 @@ public class TelevisaoTest
         Assert.AreEqual(volumeInicial, televisao.Volume);
     }
 
+    [TestMethod]
+    public void Deve_Iniciar_No_Primeiro_Canal()
+    {
+        Televisao televisao = new Televisao(25f);
 
+        Assert.AreEqual(1, televisao.Canal);
+    }
+
+    [TestMethod]
+    public void Deve_Estar_Dentro_Da_Faixa_De_Canais()
+    {
+        Televisao televisao = new Televisao(25f);
+
+        televisao.DescerCanal();
+
+        Assert.AreEqual(10, televisao.Canal);
+
+        televisao.AlterarCanal(10);
+        televisao.SubirCanal();
+
+        Assert.AreEqual(1, televisao.Canal);
+    }
+
+    public void Alterar_Canal_Deve_Estar_Na_Faixa_De_Canais()
+    {
+        Televisao televisao = new Televisao(25f);
+
+        televisao.AlterarCanal(televisao.PrimeiroCanal()+1);
+
+        televisao.AlterarCanal(televisao.UltimoCanal()+1);
+
+        Assert.AreEqual(televisao.PrimeiroCanal()+1, televisao.Canal);
+
+        televisao.AlterarCanal(televisao.PrimeiroCanal()+1);
+
+        televisao.AlterarCanal(televisao.PrimeiroCanal()-1);
+
+        Assert.AreEqual(televisao.PrimeiroCanal()+1, televisao.Canal);
+    }
     
 }
