@@ -23,12 +23,12 @@ public class Televisao
     //Optamos pela utilização da constante para tornar o código mais legível.
     private const float TAMANHO_MINIMO = 22;
     private const float TAMANHO_MAXIMO = 80;
-    private const int VOLUME_MAXIMO = 12;
-    private const int VOLUME_MINIMO = 0;
+    public const int VOLUME_MAXIMO = 12;
+    public const int VOLUME_MINIMO = 0;
     private const int VOLUME_PADRAO = 10;
     private int _ultimoVolume = VOLUME_PADRAO;
-    private const int PRIMEIRO_CANAL = 1;
-    private const int ULTIMO_CANAL = 10;
+    public const int PRIMEIRO_CANAL = 1;
+    public const int ULTIMO_CANAL = 10;
 
     //Get: permite que seja executada a 
     //leitura do valor atual da propriedade
@@ -112,26 +112,16 @@ public class Televisao
         }
     }
 
-    public void AlterarCanal(int C)
+    public void AlterarCanal(int canal_alvo)
     {
-        if (C >= PRIMEIRO_CANAL && C <= ULTIMO_CANAL)
+        if (canal_alvo >= PRIMEIRO_CANAL && canal_alvo <= ULTIMO_CANAL)
         {
-            if (Canal != C)
+            if (Canal != canal_alvo)
             {
-                Canal = C;
+                Canal = canal_alvo;
             } else {
                 Console.WriteLine("A TV já está sintonizada neste canal!");
             }
         }
-    }
-
-    public int PrimeiroCanal()
-    {
-        return PRIMEIRO_CANAL;
-    }
-
-    public int UltimoCanal()
-    {
-        return ULTIMO_CANAL;
     }
 }

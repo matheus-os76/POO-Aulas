@@ -125,35 +125,67 @@ public class TelevisaoTest
     }
 
     [TestMethod]
-    public void Deve_Estar_Dentro_Da_Faixa_De_Canais()
+    public void Canal_Subir_Funciona()
     {
         Televisao televisao = new Televisao(25f);
-
-        televisao.DescerCanal();
-
-        Assert.AreEqual(10, televisao.Canal);
-
-        televisao.AlterarCanal(10);
+        
         televisao.SubirCanal();
-
-        Assert.AreEqual(1, televisao.Canal);
+        Assert.AreEqual(Televisao.PRIMEIRO_CANAL+1, televisao.Canal);
     }
 
-    public void Alterar_Canal_Deve_Estar_Na_Faixa_De_Canais()
+    [TestMethod]
+    public void Canal_Descer_Funciona()
+    {
+        Televisao televisao = new Televisao(25f);
+        
+        // Inicia no canal 1, sobe para o 2
+        televisao.SubirCanal();
+
+        // Desce de volta para o canal 1
+        televisao.DescerCanal();
+        Assert.AreEqual(Televisao.PRIMEIRO_CANAL, televisao.Canal);
+    }
+
+    [TestMethod]
+    public void Subir_E_Descer_Canal_Devem_Estar_Dentro_Da_Faixa_De_Canais()
     {
         Televisao televisao = new Televisao(25f);
 
-        televisao.AlterarCanal(televisao.PrimeiroCanal()+1);
+        // Tenta descer um canal partindo do primeiro canal
+        televisao.DescerCanal();
+        Assert.AreEqual(Televisao.ULTIMO_CANAL, televisao.Canal);
 
-        televisao.AlterarCanal(televisao.UltimoCanal()+1);
+        // Tenta subir um canal partindo do ultimo canal
+        televisao.SubirCanal();
+        Assert.AreEqual(Televisao.PRIMEIRO_CANAL, televisao.Canal);
+    }
 
-        Assert.AreEqual(televisao.PrimeiroCanal()+1, televisao.Canal);
+    [TestMethod]
+    public void Canal_Foi_Alterado_Pelo_Alterar_Canal()
+    {
+        Televisao televisao = new Televisao(25f);
 
-        televisao.AlterarCanal(televisao.PrimeiroCanal()+1);
+        // Canal é iniciado no 1 e tenta mudar para o 2
+        televisao.AlterarCanal(Televisao.PRIMEIRO_CANAL+1);
+        Assert.AreEqual(Televisao.PRIMEIRO_CANAL+1, televisao.Canal);
 
-        televisao.AlterarCanal(televisao.PrimeiroCanal()-1);
+        // Tenta mudar o canal para o ultimo canal
+        televisao.AlterarCanal(Televisao.ULTIMO_CANAL);
+        Assert.AreEqual(Televisao.ULTIMO_CANAL, televisao.Canal);
+    }
 
-        Assert.AreEqual(televisao.PrimeiroCanal()+1, televisao.Canal);
+    [TestMethod]
+    public void Alterar_Canal_Nao_Pode_Alterar_Para_Canal_Invalido()
+    {
+        Televisao televisao = new Televisao(25f);
+
+        // Tenta alterar pra um canal invalido abaixo da faixa possivel de canais
+        televisao.AlterarCanal(Televisao.PRIMEIRO_CANAL-1);
+        Assert.AreEqual(1, televisao.Canal);
+
+        // Tenta alterar pra um canal invalido acima da faixa possivel de canais
+        televisao.AlterarCanal(Televisao.ULTIMO_CANAL+1);
+        Assert.AreEqual(1, televisao.Canal);
     }
     
 }
