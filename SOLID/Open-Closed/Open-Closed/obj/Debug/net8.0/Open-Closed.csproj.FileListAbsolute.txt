@@ -1,0 +1,14 @@
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\bin\Debug\net8.0\Open-Closed.exe
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\bin\Debug\net8.0\Open-Closed.deps.json
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\bin\Debug\net8.0\Open-Closed.runtimeconfig.json
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\bin\Debug\net8.0\Open-Closed.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\bin\Debug\net8.0\Open-Closed.pdb
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.GeneratedMSBuildEditorConfig.editorconfig
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.AssemblyInfoInputs.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.AssemblyInfo.cs
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.csproj.CoreCompileInputs.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\refint\Open-Closed.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.pdb
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\Open-Closed.genruntimeconfig.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Open-Closed\Open-Closed\obj\Debug\net8.0\ref\Open-Closed.dll
