@@ -3,3 +3,4 @@ int x = 1;
 int y = 3;
 Console.WriteLine(y+x);
 Console.WriteLine("Olá, Mundo!!");
+char a = Console.ReadKey().KeyChar;

@@ -1,0 +1,14 @@
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\bin\Debug\net8.0\Single-Responability.exe
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\bin\Debug\net8.0\Single-Responability.deps.json
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\bin\Debug\net8.0\Single-Responability.runtimeconfig.json
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\bin\Debug\net8.0\Single-Responability.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\bin\Debug\net8.0\Single-Responability.pdb
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.GeneratedMSBuildEditorConfig.editorconfig
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.AssemblyInfoInputs.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.AssemblyInfo.cs
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.csproj.CoreCompileInputs.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\refint\Single-Responability.dll
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.pdb
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\Single-Responability.genruntimeconfig.cache
+d:\GitHub_Repos\CC_Repos\POO-Aulas\SOLID\Single-Responability\obj\Debug\net8.0\ref\Single-Responability.dll

@@ -1,0 +1,14 @@
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\bin\Debug\net8.0\Uni9.Aula02.exe
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\bin\Debug\net8.0\Uni9.Aula02.deps.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\bin\Debug\net8.0\Uni9.Aula02.runtimeconfig.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\bin\Debug\net8.0\Uni9.Aula02.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\bin\Debug\net8.0\Uni9.Aula02.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.AssemblyInfoInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.AssemblyInfo.cs
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.csproj.CoreCompileInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\refint\Uni9.Aula02.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\Uni9.Aula02.genruntimeconfig.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Aula-2\Uni9.Aula02\obj\Debug\net8.0\ref\Uni9.Aula02.dll
