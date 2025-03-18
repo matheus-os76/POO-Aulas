@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\Open-Closed\\Open-Closed\\Open-Closed.csproj": {}
+    "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\LiskovSubstitution\\LiskovSubstitution\\LiskovSubstitution.csproj": {}
   },
   "projects": {
-    "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\Open-Closed\\Open-Closed\\Open-Closed.csproj": {
+    "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\LiskovSubstitution\\LiskovSubstitution\\LiskovSubstitution.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\Open-Closed\\Open-Closed\\Open-Closed.csproj",
-        "projectName": "Open-Closed",
-        "projectPath": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\Open-Closed\\Open-Closed\\Open-Closed.csproj",
+        "projectUniqueName": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\LiskovSubstitution\\LiskovSubstitution\\LiskovSubstitution.csproj",
+        "projectName": "LiskovSubstitution",
+        "projectPath": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\LiskovSubstitution\\LiskovSubstitution\\LiskovSubstitution.csproj",
         "packagesPath": "C:\\Users\\T-Gamer\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\Open-Closed\\Open-Closed\\obj\\",
+        "outputPath": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\SOLID\\LiskovSubstitution\\LiskovSubstitution\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T-Gamer\\AppData\\Roaming\\NuGet\\NuGet.Config"
