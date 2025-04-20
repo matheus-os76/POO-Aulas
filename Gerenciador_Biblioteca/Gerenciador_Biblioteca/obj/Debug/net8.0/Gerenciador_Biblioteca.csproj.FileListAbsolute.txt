@@ -1,0 +1,14 @@
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\bin\Debug\net8.0\Gerenciador_Biblioteca.exe
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\bin\Debug\net8.0\Gerenciador_Biblioteca.deps.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\bin\Debug\net8.0\Gerenciador_Biblioteca.runtimeconfig.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\bin\Debug\net8.0\Gerenciador_Biblioteca.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\bin\Debug\net8.0\Gerenciador_Biblioteca.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.AssemblyInfoInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.AssemblyInfo.cs
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.csproj.CoreCompileInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\refint\Gerenciador_Biblioteca.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\Gerenciador_Biblioteca.genruntimeconfig.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Gerenciador_Biblioteca\Gerenciador_Biblioteca\obj\Debug\net8.0\ref\Gerenciador_Biblioteca.dll
