@@ -5,7 +5,7 @@ Aulas de programação orientada a objetos
 ## Gerenciador de Bibliotecas
 
 1. Todas as classes possuem atributos que podem ser acessados e editados irrestritamente, fazendo com que firam o Open-Closed Principle do SOLID, sendo abertos para a expansão e alteração de aspectos dentro do programa;
-2. O atributo ISBN da classe 'Livro' e os atributos envolvendo datas da classe 'Emprestimo' são considerados Primitive Obsession, sendo mais adequado criar classes para esses tipos de dados;
+2. O atributo ISBN da classe 'Livro' pode ser considerado Primitive Obsession, sendo mais adequado criar uma classe para esse tipo de dado;
 3. Há um excesso de comentários em muitas classes, isso polui o código e faz com que a sua leitura seja prejudicada. Os comentários mais uteis estão presentes dentro dos metodos da classe 'GerenciadorBiblioteca' e do metodo Main;
 4. Toda a lógica por trás da adição de um usuário e o envio de um e-mail para ele poderia ser facilitada com a criação de um atributo E-Mail dentro da classe 'Usuário';
 5. O fato de enviar SMS ser possível mesmo sem termos informações sobre o número de telefone do usuário não faz sentido;
