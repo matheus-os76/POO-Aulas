@@ -26,6 +26,7 @@ namespace Gerenciador_Biblioteca
             Console.WriteLine($"Multa por atraso: R$ {multa}");
 
             Console.ReadLine();
+            Console.WriteLine("Teste");
         }
     }
 }
