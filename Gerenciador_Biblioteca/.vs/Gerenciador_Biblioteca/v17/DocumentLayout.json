@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\gerenciadorbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\gerenciadorbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\gerenciadorbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\gerenciadorbiblioteca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|d:\\github_repos\\cc_repos\\poo-aulas\\gerenciador_biblioteca\\gerenciador_biblioteca\\isbn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ED256EE-D712-406A-86BA-8DA6CB4BBFA7}|Gerenciador_Biblioteca\\Gerenciador_Biblioteca.csproj|solutionrelative:gerenciador_biblioteca\\isbn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,65 +38,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "ISBN.cs",
+              "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\ISBN.cs",
+              "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\ISBN.cs",
+              "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\ISBN.cs",
+              "RelativeToolTip": "Gerenciador_Biblioteca\\ISBN.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwE0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T01:03:25.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GerenciadorBiblioteca.cs",
               "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\GerenciadorBiblioteca.cs",
               "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\GerenciadorBiblioteca.cs",
               "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\GerenciadorBiblioteca.cs",
               "RelativeToolTip": "Gerenciador_Biblioteca\\GerenciadorBiblioteca.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAcwFYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T23:40:44.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Emprestimo.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Emprestimo.cs",
-              "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\Emprestimo.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Emprestimo.cs",
-              "RelativeToolTip": "Gerenciador_Biblioteca\\Emprestimo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T23:40:09.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Usuario.cs",
-              "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\Usuario.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Usuario.cs",
-              "RelativeToolTip": "Gerenciador_Biblioteca\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T23:39:46.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Livro.cs",
-              "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Livro.cs",
-              "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\Livro.cs",
-              "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Livro.cs",
-              "RelativeToolTip": "Gerenciador_Biblioteca\\Livro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T23:39:04.318Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Program.cs",
               "RelativeDocumentMoniker": "Gerenciador_Biblioteca\\Program.cs",
               "ToolTip": "D:\\GitHub_Repos\\CC_Repos\\POO-Aulas\\Gerenciador_Biblioteca\\Gerenciador_Biblioteca\\Program.cs",
               "RelativeToolTip": "Gerenciador_Biblioteca\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAYwDoAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T23:38:38.024Z",
               "EditorCaption": ""
