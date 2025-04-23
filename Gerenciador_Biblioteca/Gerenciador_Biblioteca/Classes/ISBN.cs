@@ -6,11 +6,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Gerenciador_Biblioteca
+namespace Gerenciador_Biblioteca.Classes
 {
-    public class isbn
+    public class ISBN
     {
-        public isbn(string codigo)
+        public ISBN(string codigo)
         {
             // Verifica se o código ISBN inserido não é vázio e tem a quantia certa de digitos
             if (codigo.Any(char.IsAsciiLetter))

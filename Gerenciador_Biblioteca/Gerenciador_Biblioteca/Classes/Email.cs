@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gerenciador_Biblioteca
+namespace Gerenciador_Biblioteca.Classes
 {
     public class Email
     {
@@ -48,7 +48,7 @@ namespace Gerenciador_Biblioteca
             int pos_ponto = endereco.IndexOf('.');
 
             // Verifica se há ao menos um caractere entre o '@' e o '.'
-            if ((pos_ponto - pos_arroba) <= 1)
+            if (pos_ponto - pos_arroba <= 1)
                 return false;
             else if (pos_arroba <= 0 || pos_ponto <= 0)
                 return false;

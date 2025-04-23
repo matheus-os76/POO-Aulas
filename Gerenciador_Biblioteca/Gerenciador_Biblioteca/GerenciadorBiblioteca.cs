@@ -1,157 +1,206 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
+using Gerenciador_Biblioteca.Classes_Biblioteca;
+using Gerenciador_Biblioteca.Classes;
 
 namespace Gerenciador_Biblioteca
 {
-    public class GerenciadorBiblioteca
+    public class GerenciadorBiblioteca 
     {
-        private List<Livro> livros = new List<Livro>();
-        private List<Usuario> usuarios = new List<Usuario>();
-        private List<Emprestimo> emprestimos = new List<Emprestimo>();
-
-        public void AdicionarLivro(Livro livro_adicionar)
+        private List<Livro_Biblioteca> Livros = new List<Livro_Biblioteca> { }; 
+        private List<Usuario_Biblioteca> Usuarios = new List<Usuario_Biblioteca> { }; 
+        private List<Emprestimo_Biblioteca> Emprestimos = new List<Emprestimo_Biblioteca> { };
+        
+        private Livro_Biblioteca? BuscarLivro(ISBN isbn_buscar)
         {
-            foreach (var livro in livros)
-            {
-                if (livro.ISBN.Codigo == livro_adicionar.ISBN.Codigo)
-                {
-                    throw new ArgumentException($"O livro \"{livro_adicionar.Titulo}\" " +
-                        $"possui o ISBN ({livro_adicionar.ISBN}) duplicado");
-                }
-            }
+            var resultado_busca = Livros.Find(l => l.Livro.ISBN == isbn_buscar);
 
-            Livro livro_biblioteca = new(livro_adicionar.Titulo, livro_adicionar.Autor, livro_adicionar.ISBN, livro_adicionar.Disponivel, livro_adicionar.Quantidade);
-            livros.Add(livro_biblioteca);
+            if (resultado_busca == null)
+                return null;
 
-            Console.WriteLine($"O livro \"{livro_biblioteca.Titulo}\" foi adicionado a biblioteca.");
+            return resultado_busca;
         }
 
-        public void AdicionarUsuario(Usuario usuario_adicionar)
+        private Usuario_Biblioteca? BuscarUsuario(int? id_buscar = null, Telefone ? telefone_buscar = null)
         {
-            foreach (var usuario in usuarios)
-            {
-                if (usuario.ID == usuario_adicionar.ID)
-                {
-                    throw new ArgumentException($"O usuário \"{usuario_adicionar.Nome}\" " +
-                        $"possui o mesmo ID do usuário \"{usuario.Nome}\"");
-                }
+            if ((id_buscar == null && telefone_buscar == null) || id_buscar < 0)
+                throw new ArgumentNullException("Coloque algum parâmetro para a busca");
 
-                if (usuario.Telefone.Num_Telefone == usuario_adicionar.Telefone.Num_Telefone)
-                {
-                    throw new ArgumentException($"O usuário \"{usuario_adicionar.Nome}\" " +
-                        $"possui o mesmo Telefone do usuário \"{usuario.Nome}\"");
-                }
+            var resultado_busca = Usuarios.Find(u =>
+                                                u.Usuario.Telefone == telefone_buscar ||
+                                                u.Usuario.ID == id_buscar);
 
-            }
+            if (resultado_busca == null)
+                return null;
 
-            Usuario usuario_biblioteca = new(usuario_adicionar.ID, usuario_adicionar.Nome, usuario_adicionar.Email, usuario_adicionar.Telefone);
-            usuarios.Add(usuario_biblioteca);
+            return resultado_busca;
+        }
+
+        public bool AdicionarLivro(Livro livro_adicionar, int quantidade = 0)
+        {
+            var livro_existente = BuscarLivro(livro_adicionar.ISBN);
+
+            if (livro_existente != null)
+                return false;
+
+            Livro_Biblioteca Novo_Livro = new(livro_adicionar, quantidade);
+            Livros.Add(Novo_Livro);
+
+            Console.WriteLine($"O livro \"{Novo_Livro.Livro.Titulo}\" foi adicionado a biblioteca.");
+            return true;
+        }
+
+        public bool AdicionarUsuario(Usuario usuario_adicionar)
+        {
+            var usuario_existente = BuscarUsuario(usuario_adicionar.ID, usuario_adicionar.Telefone);
+
+            if (usuario_existente != null)
+                return false;
+
+            Usuario_Biblioteca Novo_Usuario = new(usuario_adicionar);
+            Usuarios.Add(Novo_Usuario);
 
             Console.WriteLine($"O usuário \"{usuario_adicionar.Nome}\" foi adicionado a biblioteca.");
+            return true;
         }
-        
-        public bool RealizarEmprestimo(Usuario usuario, Livro livro, int diasEmprestimo)
+
+        public bool RealizarEmprestimo(int usuario_id, ISBN isbn, int diasEmprestimo)
         {
-            var livro_biblioteca = livros.Find(l => l.ISBN == livro.ISBN);
-            var usuario_biblioteca = usuarios.Find(u => u.ID == usuario.ID);
+            var livro_emprestimo = BuscarLivro(isbn);
+            var usuario_emprestimo = BuscarUsuario(usuario_id);
 
-            if (livro_biblioteca != null && usuario_biblioteca != null && livro_biblioteca.Disponivel)
+            if (livro_emprestimo != null && usuario_emprestimo != null)
+            { 
+                if (livro_emprestimo.Disponivel)
+                {
+                    livro_emprestimo.RemoverQuantidade(1);
+
+                    Emprestimo_Biblioteca emprestimo = new(
+
+                        new Emprestimo(usuario_emprestimo.Usuario, DateTime.Today), 
+                        DateTime.Today.AddDays(diasEmprestimo),
+                        livro_emprestimo
+
+                    );
+
+                    EnviarMensagem(usuario_id, string.Format($"Você realizou um empréstimo " +
+                        $"do livro \"{livro_emprestimo.Livro.Titulo}\" com devolução" +
+                        $"prevista para " +
+                        $"{emprestimo.Devolucao_Prevista.Day}/" +
+                        $"{emprestimo.Devolucao_Prevista.Month}/" +
+                        $"{emprestimo.Devolucao_Prevista.Year}"));
+
+                    EnviarMensagem(usuario_id, string.Format($"Você realizou um empréstimo " +
+                        $"do livro \"{livro_emprestimo.Livro.Titulo}\" com devolução" +
+                        $"prevista para " +
+                        $"{emprestimo.Devolucao_Prevista.Day}/" +
+                        $"{emprestimo.Devolucao_Prevista.Month}/" +
+                        $"{emprestimo.Devolucao_Prevista.Year}"), 
+                        "Emprestimo");
+
+                    return true;
+                }
+                Console.WriteLine($"O livro \"{livro_emprestimo.Livro.Titulo}\" está indísponível no momento");
+                return false;
+            }
+
+            return false;
+        }
+
+        public bool RealizarDevolucao(int usuario_id, ISBN isbn)
+        {
+            var emprestimo = Emprestimos.Find(e =>
+                                              e.Livro_Emprestado.Livro.ISBN == isbn &&
+                                              e.Emprestimo.Usuario.ID == usuario_id &&
+                                              e.Emprestimo.Devolucao_Efetiva == null);
+
+            if (emprestimo != null)
             {
-                livro_biblioteca.retirar_quantidade(1);
+                var usuario_emprestimo = Usuarios.Find(u => u.Usuario.ID == usuario_id);
 
-                Emprestimo emprestimo = new(livro_biblioteca, usuario_biblioteca, DateTime.Today, DateTime.Today.AddDays(diasEmprestimo));
-                emprestimos.Add(emprestimo);
+                emprestimo.Emprestimo.Devolucao_Efetiva = DateTime.Today;
+                emprestimo.Livro_Emprestado.AdicionarQuantidade(1);
 
-                Console.WriteLine($"O livro \"{livro_biblioteca.Titulo}\" foi emprestado ao usuário \"{usuario_biblioteca.Nome}\", " +
-                    $"com data prevista de devolução para " +
-                    $"{emprestimo.DataDevolucaoPrevista.Day}/" +
-                    $"{emprestimo.DataDevolucaoPrevista.Month}/" +
-                    $"{emprestimo.DataDevolucaoPrevista.Year}");
+                if (emprestimo.Emprestimo.Devolucao_Efetiva > emprestimo.Devolucao_Prevista)
+                {
+                    Multa_Biblioteca multa_emprestimo = new(
+                        new(emprestimo.Emprestimo.Usuario),
+                        emprestimo
+                    );
 
-                EnviarEmail(usuario_biblioteca.Email,
-                "Empréstimo Realizado",
-                $"Você pegou emprestado o livro: {livro_biblioteca.Titulo} ");
+                    usuario_emprestimo.Lista_Multas.Add( multa_emprestimo );
+                    usuario_emprestimo.Saldo -= multa_emprestimo.Multa.Valor;
 
-                EnviarSMS(usuario_biblioteca.Telefone, $"Você pegou emprestado o livro: {livro_biblioteca.Titulo} ");
-
+                    EnviarMensagem(usuario_id, string.Format($"Uma multa de valor " +
+                        $"R$ {multa_emprestimo.Multa.Valor} foi registrada na sua conta "),
+                        "Multa");
+                }
 
                 return true;
             }
 
-            Console.WriteLine($"O livro \"{livro.Titulo}\" está indísponível no momento");
             return false;
-
         }
-
-        public void EnviarEmail(Email email_destino, string assunto, string mensagem)
+        
+        public bool EnviarMensagem(int usuario_id, string mensagem, string? assunto = null)
         {
-            if (string.IsNullOrEmpty(assunto) || string.IsNullOrEmpty(mensagem))
+            var usuario_destinatario = BuscarUsuario(usuario_id);
+
+            if (usuario_destinatario != null)
             {
-                throw new ArgumentNullException("A mensagem ou o assunto estão vázios");
+                string tipo;
+
+                if (assunto == null)
+                    tipo = "Telefone";
+                else
+                    tipo = "E-mail";
+
+                    Mensagem_Biblioteca mensagem_enviar = new(
+                        new(usuario_destinatario.Usuario, mensagem),
+                        assunto
+                    );
+                usuario_destinatario.Caixa_Entrada.Add( mensagem_enviar );
+                Console.WriteLine($"Uma mensagem foi enviada para o {tipo} do(a) " +
+                    $"{usuario_destinatario.Usuario.Nome}");
+
+                return true;
             }
 
-            Console.WriteLine($"A mensagem sobre \"{assunto}\" foi enviada para o e-mail {email_destino.Endereco}");
-            Console.WriteLine($"\n\n Para: {email_destino.Endereco}\n   {mensagem}\n\n");
+            return false;
         }
 
-        public void EnviarSMS(Telefone telefone_destino, string mensagem)
+        public List<Livro_Biblioteca> TodosLivros() { return Livros; }
+
+        public List<Usuario_Biblioteca> TodosUsuarios() { return Usuarios; }
+
+        public List<Emprestimo_Biblioteca> TodosEmprestimos() { return Emprestimos; }
+
+        public List<Livro_Biblioteca> Busca(string? titulo, ISBN isbn)
         {
-            if (string.IsNullOrEmpty(mensagem))
-            {
-                throw new ArgumentNullException("A mensagem está vázia");
-            }
+            List<Livro_Biblioteca> Resultado = Livros.FindAll(l => l.Livro.Titulo == titulo || 
+                                                              l.Livro.ISBN == isbn);
 
-            Console.WriteLine($"Biblioteca: {mensagem}");
+            return Resultado;
         }
-
-        //// Método que realiza devolução e calcula multa
-        //public double RealizarDevolucao(string isbn, int usuarioId)
-        //{
-        //    var emprestimo = emprestimos.Find(e =>
-        //        e.Livro.ISBN == isbn &&
-        //        e.Usuario.ID == usuarioId &&
-        //        e.DataDevolucaoEfetiva == null);
-
-        //    if (emprestimo != null)
-        //    {
-        //        emprestimo.DataDevolucaoEfetiva = DateTime.Now;
-        //        emprestimo.Livro.Disponivel = true;
-
-        //        // Calcular multa (R$ 1,00 por dia de atraso)
-        //        double multa = 0;
-        //        if (DateTime.Now > emprestimo.DataDevolucaoPrevista)
-        //        {
-        //            TimeSpan atraso = DateTime.Now - emprestimo.DataDevolucaoPrevista;
-        //            multa = atraso.Days * 1.0;
-
-        //            // Enviar email sobre multa
-        //            EnviarEmail(emprestimo.Usuario.Nome, "Multa por Atraso",
-        //                "Você tem uma multa de R$ " + multa);
-        //        }
-
-        //        return multa;
-        //    }
-
-        //    return -1; // Código de erro
-        //}
-
-        //// Método para buscar todos os livros
-        //public List<Livro> BuscarTodosLivros()
-        //{
-        //    return livros;
-        //}
-
-        //// Método para buscar todos os usuários
-        //public List<Usuario> BuscarTodosUsuarios()
-        //{
-        //    return usuarios;
-        //}
-
-        //// Método para buscar todos os empréstimos
-        //public List<Emprestimo> BuscarTodosEmprestimos()
-        //{
-        //    return emprestimos;
-        //}
     }
 }
+
+//public bool AdicionarEmprestimo(Emprestimo_Biblioteca emprestimo_passado)
+//{
+//    var livro_emprestimo = BuscarLivro(emprestimo_passado.Livro_Emprestado.Livro.ISBN);
+//    var usuario_emprestimo = BuscarUsuario(emprestimo_passado.Emprestimo.Usuario.ID, 
+//                                           emprestimo_passado.Emprestimo.Usuario.Telefone);
+
+//    if (emprestimo_passado.Emprestimo.Devolucao_Efetiva == null)
+//    {
+//        throw new ArgumentNullException("O emprestimo adicionado não teve devolução");            
+//    }
+
+//    if (livro_emprestimo != null && usuario_emprestimo != null)
+//    {
+
+//    }
+
+//    return false;
+//}

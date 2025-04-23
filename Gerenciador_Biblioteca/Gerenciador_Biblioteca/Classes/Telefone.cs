@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Gerenciador_Biblioteca
+namespace Gerenciador_Biblioteca.Classes
 {
     public class Telefone
     {
@@ -30,14 +30,9 @@ namespace Gerenciador_Biblioteca
 
             DDD = telefone.Substring(0,2);
             Num_Telefone = telefone.Substring(2);
-
-            if (Num_Telefone.Length == 8) Tipo = 'F';
-            else Tipo = 'M';
         }
 
         public string DDD { get; }
         public string Num_Telefone { get; }
-        private char Tipo;
-
     }
 }
