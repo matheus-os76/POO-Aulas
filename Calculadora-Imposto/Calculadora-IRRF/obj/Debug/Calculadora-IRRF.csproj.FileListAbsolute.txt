@@ -1,0 +1,7 @@
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\bin\Debug\Calculadora-IRRF.exe.config
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\bin\Debug\Calculadora-IRRF.exe
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\bin\Debug\Calculadora-IRRF.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\obj\Debug\Calculadora-IRRF.csproj.AssemblyReference.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\obj\Debug\Calculadora-IRRF.csproj.CoreCompileInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\obj\Debug\Calculadora-IRRF.exe
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Calculadora-Imposto\Calculadora-IRRF\obj\Debug\Calculadora-IRRF.pdb
