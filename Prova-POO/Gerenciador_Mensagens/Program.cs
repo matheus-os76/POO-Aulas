@@ -1,5 +1,12 @@
 ﻿using Gerenciador_Mensagens;
 
-Telefone telefone = new Telefone("2098190 0792");
+Usuario usuario = new Usuario("Matheus", "11981900792");
 
-Console.WriteLine(telefone.Estado);
+Mensagem mensagem = new Mensagem("Eae, se liga no meme",
+                                 usuario,
+                                 Canal.Whatsapp,
+                                 new DateTime(2000, 3, 4));
+
+Mensagem.EnviarUsuario(mensagem);
+
+Console.WriteLine(usuario.Caixa_Entrada.ToArray()[0]._Mensagem);

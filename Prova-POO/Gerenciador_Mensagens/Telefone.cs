@@ -11,6 +11,8 @@ namespace Gerenciador_Mensagens
         public string Numero_Telefone {  get; private set; }
         public string DDD { get; private set; }
 
+        public List<Mensagem> SMS { get; private set; } 
+
         public string Estado { get; private set; }
 
         public Telefone(string telefone) 
@@ -27,6 +29,7 @@ namespace Gerenciador_Mensagens
 
             int DDD_numerico = Convert.ToInt16(DDD);
 
+            #region Definir Estado pelo DDD
             if (DDD_numerico >= 11 && DDD_numerico <= 19)
             {
                 Estado = "SP";
@@ -134,8 +137,9 @@ namespace Gerenciador_Mensagens
             }
             else
             {
-                Estado = null;
+                Estado = "";
             }
+            #endregion
         }
 
         private bool stringContemLetras(string str)
@@ -201,6 +205,23 @@ namespace Gerenciador_Mensagens
 
             Numero_Telefone = novoTel;
         }
+
+        public override string ToString()
+        {
+            string Primeira_Parte_Tel = Numero_Telefone.Substring(0, 5);
+            string Segunda_Parte_Tel = Numero_Telefone.Substring(5);
+            string telefone_formatado = $"{DDD} {Primeira_Parte_Tel + "-" + Segunda_Parte_Tel}";
+
+            return telefone_formatado;
+        }
+    
+        public static void AdicionarSMS(Mensagem mensagem, Telefone telefoneAlvo)
+        {
+            if (mensagem.Canal == Canal.Whatsapp || mensagem.Canal == Canal.Telegram)
+            {
+                telefoneAlvo.SMS.Add(mensagem);
+            }
+        }
     }
 }
-// 98190 0792
+// 98190 - 0792
