@@ -1,0 +1,14 @@
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\bin\Debug\net8.0\Gerenciador_Mensagens.exe
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\bin\Debug\net8.0\Gerenciador_Mensagens.deps.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\bin\Debug\net8.0\Gerenciador_Mensagens.runtimeconfig.json
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\bin\Debug\net8.0\Gerenciador_Mensagens.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\bin\Debug\net8.0\Gerenciador_Mensagens.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.AssemblyInfoInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.AssemblyInfo.cs
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.csproj.CoreCompileInputs.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\refint\Gerenciador_Mensagens.dll
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.pdb
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\Gerenciador_Mensagens.genruntimeconfig.cache
+D:\GitHub_Repos\CC_Repos\POO-Aulas\Prova-POO\Gerenciador_Mensagens\obj\Debug\net8.0\ref\Gerenciador_Mensagens.dll
