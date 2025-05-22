@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gerenciador_Mensagens
+namespace Gerenciador_Mensagens.Archive
 {
     internal class Formato
     {
@@ -13,8 +13,8 @@ namespace Gerenciador_Mensagens
 
         private Formato(string nome, string tipo) 
         {
-            this.Nome = nome;
-            this.Tipo = tipo;
+            Nome = nome;
+            Tipo = tipo;
         }
 
         public static Formato MP3 => new Formato("mp3", "audio");
@@ -26,8 +26,8 @@ namespace Gerenciador_Mensagens
         public static Formato PNG => new Formato("png", "imagem");
         public static Formato JPG => new Formato("jpg", "imagem");
         public static Formato WEBP => new Formato("webp", "imagem");
-        public static Formato PDF => new Formato("pdf", "arquivo");
-        public static Formato ZIP => new Formato("zip", "arquivo");
-        public static Formato EXE => new Formato("exe", "arquivo");
+        public static Formato PDF => new Formato("pdf", "documento");
+        public static Formato ZIP => new Formato("zip", "documento");
+        public static Formato EXE => new Formato("exe", "documento");
     }
 }
