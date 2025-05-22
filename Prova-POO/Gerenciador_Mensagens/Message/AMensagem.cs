@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gerenciador_Mensagens.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,18 @@ namespace Gerenciador_Mensagens.Message
 {
     internal abstract class AMensagem
     {
-        public abstract string Mensagem { get; }
-        public string Tipo { get; protected set; }
-        public abstract List<object> listaConteudo(); 
+        public string Mensagem { get; }
+        public string TipoConteudo { get; protected set; }
+        public string TipoEnvio { get; protected set; }
+
+        public AMensagem(string mensagem)
+        {
+            if (!StringUtils.stringValida(mensagem))
+            {
+                throw new ArgumentException();
+            }
+
+            Mensagem = mensagem;
+        }
     }
 }
