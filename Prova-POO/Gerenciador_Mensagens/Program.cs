@@ -1,12 +1,15 @@
 ﻿using Gerenciador_Mensagens;
+using Gerenciador_Mensagens.User;
+using Gerenciador_Mensagens.Utils;
 
-Usuario usuario = new Usuario("Matheus", "11981900792");
+void mostrarUsuario(Usuario usuario)
+{
+    Console.WriteLine($"Usuário: {usuario.Nome}\n" +
+                      $"Telefone: {usuario.Telefone.ToString()}\n" +
+                      $"E-mail: {usuario.Email.ToString()}");
+}
 
-Mensagem mensagem = new Mensagem("Eae, se liga no meme",
-                                 usuario,
-                                 Canal.Whatsapp,
-                                 new DateTime(2000, 3, 4));
+Usuario usuario = new Usuario("Matheus", "11999900000", "matheus@gmail.com");
 
-Mensagem.EnviarUsuario(mensagem);
+mostrarUsuario(usuario);
 
-Console.WriteLine(usuario.Caixa_Entrada.ToArray()[0]._Mensagem);
