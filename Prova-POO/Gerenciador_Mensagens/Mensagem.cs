@@ -3,52 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gerenciador_Mensagens.Message;
 
 namespace Gerenciador_Mensagens
 {
     internal class Mensagem
     {
+        public Usuario Destinatario { get; }
+        public Canal Canal { get; }
+        public AMensagem Conteudo { get; private set; }
 
-        //public Usuario Destinatario { get; }
-        //public Canal Canal { get; }
-        //public DateTime Data_Envio { get; }
-        //public Arquivo Arquivo { get; }
-        //public string _Mensagem { get; private set; }
-
-        //public Mensagem(string mensagem, Usuario destinatario, Canal canal, Arquivo arquivo) 
-        //{
-        //    if (mensagemValida(mensagem))
-        //    {
-        //        _Mensagem = mensagem;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Mensagem inválida");
-        //    }
-
-        //    this.Destinatario = destinatario;
-        //    this.Arquivo = arquivo;
-        //    this.Canal = canal;
-        //}
-
-        //public Mensagem(string mensagem, Usuario destinatario, Canal canal, DateTime data_envio)
-        //{
-        //    if (mensagemValida(mensagem)) 
-        //    {
-        //        _Mensagem = mensagem;
-        //    }
-        //    else
-        //    {
-        //        throw new ArgumentException("Mensagem inválida");
-        //    }
-
-        //    this.Destinatario = destinatario;
-        //    this.Data_Envio = data_envio;
-        //    this.Canal = canal;
-        //}
-
-
-        
+        public Mensagem(Usuario destinatario, Canal canal, AMensagem conteudo)
+        {
+            Destinatario = destinatario;
+            Canal = canal;
+            Conteudo = conteudo;
+        }
 
         //public void alterarMensagem(string novaMensagem)
         //{

@@ -8,6 +8,7 @@ namespace Gerenciador_Mensagens.Utils
 {
     internal static class StringUtils
     {
+        // Classe de funções uteis relacionadas a manipulação de strings
         public static bool stringContemSomenteLetras(string str)
         {
             foreach (char caractere in str)

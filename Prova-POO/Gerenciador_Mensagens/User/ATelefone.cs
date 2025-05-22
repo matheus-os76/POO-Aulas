@@ -64,5 +64,7 @@ namespace Gerenciador_Mensagens.User
 
             return true;
         }
+        public abstract void alterarDDD(string novoDDD);
+        public abstract void alterarNumero(string novoNum);
     }
 }

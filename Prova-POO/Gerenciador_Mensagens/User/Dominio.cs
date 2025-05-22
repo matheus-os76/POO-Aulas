@@ -24,7 +24,7 @@ namespace Gerenciador_Mensagens.User
             Nome = nome.Trim().ToLower();
         }
 
-        public static Dominio GMAIL => new Dominio("gMail");
+        public static Dominio GMAIL => new Dominio("gmail");
         public static Dominio YAHOO => new Dominio("yahoo");
         public static Dominio HOTMAIL => new Dominio("hotmail");
         public static Dominio AOL => new Dominio("aol");

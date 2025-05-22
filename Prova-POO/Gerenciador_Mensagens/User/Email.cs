@@ -59,7 +59,6 @@ namespace Gerenciador_Mensagens.User
         {
             return email.Substring(0, email.IndexOf('@'));
         }
-
         private Dominio? acharDominio(string email)
         {
             string nome_dominio = email.Remove(0, email.IndexOf('@') + 1);
@@ -68,7 +67,6 @@ namespace Gerenciador_Mensagens.User
 
             return Dominio.buscarDominio(nome_dominio);
         }
-    
         private string acharTopLevelDomain(string email)
         {
             email = email.Remove(0, email.IndexOf('@') + 1);
@@ -76,7 +74,6 @@ namespace Gerenciador_Mensagens.User
 
             return email;
         }
-
         public void alterarEmail(string novoEmail)
         {
             Email novo_email = new Email(novoEmail);
@@ -85,7 +82,6 @@ namespace Gerenciador_Mensagens.User
             Dominio_Email = novo_email.Dominio_Email;
             TLD = novo_email.TLD;
         }
-
         public override string ToString()
         {
             return string.Concat(Corpo, '@', Dominio_Email.Nome, '.', TLD);
