@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gerenciador_Mensagens")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aed85a1049437e909e5b269fc1e29fc9ace948c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81ff9afcdb40c3a516b8775352ba27b17894352b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gerenciador_Mensagens")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gerenciador_Mensagens")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

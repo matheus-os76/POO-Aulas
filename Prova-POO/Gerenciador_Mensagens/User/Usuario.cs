@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gerenciador_Mensagens.User;
 using Gerenciador_Mensagens.Utils;
 
 namespace Gerenciador_Mensagens.User
@@ -13,23 +14,23 @@ namespace Gerenciador_Mensagens.User
         public string Nome { get; private set; }
         public ATelefone Telefone { get; private set; }
         public Email? Email { get; private set; }
-        public List<Mensagem> CaixaEntrada { get; set; }
+        internal List<Mensagem> CaixaEntrada { get; set; }
 
-        public Usuario(string Nome, string Telefone, string? Email = null) 
+        public Usuario(string nome, string telefone, string? email = null) 
         {
-            if (!StringUtils.nomeValido(Nome, 120))
+            if (!StringUtils.nomeValido(nome, 120))
             {
-                throw new ArgumentException("O nome inserido é inválido " +
-                    "para seu usuário!");
+                throw new ArgumentException($"O nome inserido \"{nome}\" " +
+                                            $"é inválido para seu usuário!");
             }
 
             CaixaEntrada = new List<Mensagem>();
-            this.Nome = Nome;
-            this.Telefone = ATelefone.criarTelefone(Telefone);
+            Nome = nome;
+            Telefone = ATelefone.criarTelefone(telefone);
 
-            if (Email != null)
+            if (email != null)
             {
-                this.Email = new Email(Email);
+                Email = new Email(email);
             }
         }
     }

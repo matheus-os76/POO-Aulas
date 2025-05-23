@@ -10,7 +10,7 @@ namespace Gerenciador_Mensagens.User
 {
     internal abstract class ATelefone
     {
-        public string Numero {  get; private set; }
+        public string Numero { get; private set; }
         public string DDD { get; private set; }
         public string Tipo { get; }
 
@@ -27,17 +27,17 @@ namespace Gerenciador_Mensagens.User
             {
                 Telefone = Telefone.Substring(2);
             }
-            
-            string DDD_aux = Telefone.Substring(0, 2);
-            string Num_Tel_aux = Telefone.Substring(2);
 
-            if (Num_Tel_aux.Length == 9)
+            string ddd = Telefone.Substring(0, 2);
+            string numero = Telefone.Substring(2);
+
+            if (numero.Length == 9)
             {
-                return new TelefoneCelular(DDD_aux, Num_Tel_aux, "celular");
+                return new TelefoneCelular(ddd, numero, "celular");
             }
-            else if (Num_Tel_aux.Length == 8)
+            else if (numero.Length == 8)
             {
-                return new TelefoneFixo(DDD_aux, Num_Tel_aux, "fixo");
+                return new TelefoneFixo(ddd, numero, "fixo");
             }
             else
             {
@@ -54,12 +54,16 @@ namespace Gerenciador_Mensagens.User
                 return false;
             }
 
-            Telefone = Telefone.Trim().Trim('-').Trim('_');
+            Telefone.Trim(new Char[] { ' ', '-', '.', '_' });
 
-            if ((Telefone.Length > 15 || Telefone.Length < 8) ||
-                !StringUtils.stringContemSomenteNumeros(Telefone))
-            { 
+            if (Telefone.Length > 15 || Telefone.Length < 8)
+            {
                 return false; 
+            }
+
+            if (!StringUtils.stringContemSomenteNumeros(Telefone))
+            {
+                return false;
             }
 
             return true;

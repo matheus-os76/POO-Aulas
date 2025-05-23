@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gerenciador_Mensagens
+namespace Gerenciador_Mensagens.Message
 {
     internal class Canal
     {
@@ -19,8 +19,8 @@ namespace Gerenciador_Mensagens
                 throw new ArgumentException();
             }
 
-            this.Nome = nome;
-            this.Tipo = tipo;
+            Nome = nome;
+            Tipo = tipo;
         }
 
         public static Canal Facebook => new Canal("Facebook", "arquivos");

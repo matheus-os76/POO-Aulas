@@ -82,7 +82,7 @@ namespace Gerenciador_Mensagens.User
             Dominio_Email = novo_email.Dominio_Email;
             TLD = novo_email.TLD;
         }
-        public override string ToString()
+        public override string? ToString()
         {
             return string.Concat(Corpo, '@', Dominio_Email.Nome, '.', TLD);
         }
